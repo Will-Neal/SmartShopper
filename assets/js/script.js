@@ -1,9 +1,15 @@
 var searchBtn = document.querySelector("#searchBtn")
+var amazonImg = document.querySelector("#amazonCardImage")
+
+
 
 function getAmazon(event){
+    var userInput = document.querySelector("#userInput").value
+    console.log(userInput)
     event.preventDefault()
     console.log("you clicked the search button")
-    fetch("https://wolf-amazon-data-scraper.p.rapidapi.com/search/applewatch?api_key=59ef84be287bba26357f5519b0058332", {
+    var searchURL = "https://wolf-amazon-data-scraper.p.rapidapi.com/search/"+ userInput +"?api_key=59ef84be287bba26357f5519b0058332"
+    fetch(searchURL, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "wolf-amazon-data-scraper.p.rapidapi.com",
@@ -16,12 +22,13 @@ function getAmazon(event){
         return response.json();
     })
     .then(function(data) {
-        // console.log(data)
+        console.log("data: " + data)
         console.log("image: " + data.results[0].image)
         // console.log(data.results[0].name)
         console.log("price: $" + data.results[0].price)
         console.log("Ratings: " + data.results[0].stars)
         console.log("url: " + data.results[0].url)
+        amazonImg.src = data.results[0].image
         var urlSplit = data.results[0].url.split("/")
         var productId = urlSplit[5]
         console.log(productId)
@@ -36,7 +43,7 @@ function getAmazon(event){
             console.log("you have called 2nd API")
             return response.json();
         }).then(function(data) {
-            console.log(data)
+            console.log("data: " + data)
             console.log("Name: " + data.name)
             console.log("Description: " + data.full_description)
         })
