@@ -8,3 +8,27 @@
 .lead {
     text-align: center;
 }
+
+/* Card Deck */
+.card-deck {
+    width: 50%;
+}
+
+/* Card Title */
+.card-title {
+    text-align: center;
+}
+
+.text-muted {
+    color: white !important;
+}
+
+/* Amazon Title */
+.amazon-title {
+    background-color: #FEBD69;
+}
+
+/* eBay Title */
+.ebay-title {
+    background-color: #0064d2;
+}
