@@ -1,6 +1,7 @@
 var searchBtn = document.querySelector("#searchBtn")
 var amazonImg = document.querySelector("#amazonCardImage")
 var amazonDescription = document.querySelector("#amazonCardText")
+var amazonItemName = document.querySelector("#amazonItemName")
 
 
 
@@ -48,6 +49,7 @@ function getAmazon(event){
             console.log("Name: " + data.name);
             console.log("Description: " + data.full_description);
             amazonDescription.textContent = data.full_description;
+            amazonItemName.textContent = data.name;
         })
     })
 
