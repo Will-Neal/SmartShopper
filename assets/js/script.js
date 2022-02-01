@@ -11,10 +11,15 @@ function getAmazon(event){
 	}
     })
     .then(function(response){
-        console.log('you hit the response section')
-	    console.log(response.json().app_sale_price);
-        // return response.json()
+        console.log('you hit the response section');
+        return response.json();
     })
+    .then(function(data) {
+        console.log(data);
+        console.log(data.app_sale_price);
+    })
+        // return response.json()
+    
 //     .catch(err => {
 // 	console.error(err);
 // }); 
