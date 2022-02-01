@@ -1,5 +1,6 @@
 var searchBtn = document.querySelector("#searchBtn")
 var amazonImg = document.querySelector("#amazonCardImage")
+var amazonDescription = document.querySelector("#amazonCardText")
 
 
 
@@ -43,9 +44,10 @@ function getAmazon(event){
             console.log("you have called 2nd API")
             return response.json();
         }).then(function(data) {
-            console.log("data: " + data)
-            console.log("Name: " + data.name)
-            console.log("Description: " + data.full_description)
+            console.log("data: " + data);
+            console.log("Name: " + data.name);
+            console.log("Description: " + data.full_description);
+            amazonDescription.textContent = data.full_description;
         })
     })
 
