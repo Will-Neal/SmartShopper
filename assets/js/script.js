@@ -11,11 +11,13 @@ function getAmazon(event){
 	}
     })
     .then(function(response){
-	    console.log(response);
+        console.log('you hit the response section')
+	    console.log(response.json().app_sale_price);
+        // return response.json()
     })
-    .catch(err => {
-	console.error(err);
-}); 
+//     .catch(err => {
+// 	console.error(err);
+// }); 
 }
 
 searchBtn.addEventListener("click", getAmazon)
