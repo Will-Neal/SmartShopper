@@ -12,11 +12,13 @@ function getAmazon(event){
     })
     .then(function(response){
         console.log('you hit the response section');
+        // console.log(response.json())
         return response.json();
     })
     .then(function(data) {
         console.log(data);
         console.log(data.app_sale_price);
+        console.log(data.product_details.Customer_Reviews)
     })
         // return response.json()
     
