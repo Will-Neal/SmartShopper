@@ -75,13 +75,14 @@ function getEbay(event){
     })
     .then(function(data){
         console.log(data)
-        console.log("Price: " + data.products[0].price);
-        console.log("image: " + data.products[0].image);
-        console.log("Name: " + data.products[0].title);
-        console.log("Rating: " + data.products[0].rating);
         ebayImg.src = data.products[0].image;
+        console.log("Rating: " + data.products[0].rating);
+        console.log("Price: " + data.products[0].price);
+        console.log("Shipping: " + data.products[0].shipping);
         ebayItemName.textContent = data.products[0].title;
+        console.log("Link: " + data.products[0].productLink);
     })
+
 }
 
 searchBtn.addEventListener("click", getEbay)
