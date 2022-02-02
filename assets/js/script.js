@@ -38,7 +38,7 @@ function getAmazon(event){
         // console.log("url: " + data.results[0].url)
         amazonImg.src = data.results[0].image
         amazonPrice.textContent = "$" + data.results[0].price
-        amazonRating.textContent = data.results[0].stars + "stars"
+        amazonRating.textContent = data.results[0].stars + " ⭐"
         var urlSplit = data.results[0].url.split("/")
         var productId = urlSplit[5]
         // console.log(productId)
@@ -83,7 +83,7 @@ function getEbay(event){
         console.log(data)
         ebayImg.src = data.products[0].image;
         ebayPrice.textContent = data.products[0].price;
-        ebayRating.textContent = data.products[0].rating;
+        ebayRating.textContent = data.products[0].rating + "⭐";
         console.log("Rating: " + data.products[0].rating);
         console.log("Price: " + data.products[0].price);
         console.log("Shipping: " + data.products[0].shipping);
