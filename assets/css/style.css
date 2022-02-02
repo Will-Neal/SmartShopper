@@ -1,3 +1,13 @@
+:root {
+    --amazon-title: #FEBD69;
+    --amazon-orange: #FF9900;
+    --ebay-title: #4c9aec;
+    --ebay-red: #E53238;
+    --ebay-blue: #0064D2;
+    --ebay-yellow: #F5AF02;
+    --ebay-green: #86B817;
+}
+
 /* Title */
 .display-4 {
     text-align: center;
@@ -8,6 +18,23 @@
 #subtitle {
     text-align: center;
     padding-bottom: 5px;
+    color: #555652;
+}
+
+#eRed {
+    color: var(--ebay-red);
+}
+
+#eBlue {
+    color: var(--ebay-blue);
+}
+
+#eYellow {
+    color: var(--ebay-yellow);
+}
+
+#eGreen {
+    color: var(--ebay-green);
 }
 
 /* Search */
@@ -51,10 +78,10 @@
 
 /* Amazon Title */
 .amazon-title {
-    background-color: #FEBD69;
+    background-color: var(--amazon-title);
 }
 
 /* eBay Title */
 .ebay-title {
-    background-color: #4c9aec;
+    background-color: var(--ebay-title);
 }
