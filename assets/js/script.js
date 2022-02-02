@@ -81,9 +81,11 @@ function getEbay(event){
     })
     .then(function(data){
         console.log(data)
+        shortRating = data.products[0].rating.split("")
+        console.log(shortRating[0])
         ebayImg.src = data.products[0].image;
         ebayPrice.textContent = data.products[0].price;
-        ebayRating.textContent = data.products[0].rating + "⭐";
+        ebayRating.textContent = shortRating[0] + "⭐";
         console.log("Rating: " + data.products[0].rating);
         console.log("Price: " + data.products[0].price);
         console.log("Shipping: " + data.products[0].shipping);
