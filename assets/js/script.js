@@ -2,8 +2,12 @@ var searchBtn = document.querySelector("#searchBtn")
 var amazonImg = document.querySelector("#amazonCardImage")
 var amazonDescription = document.querySelector("#amazonCardText")
 var amazonItemName = document.querySelector("#amazonItemName")
+var amazonPrice = document.querySelector("#amazonPrice")
+var amazonRating = document.querySelector("#amazonRating")
 var ebayImg = document.querySelector("#ebayImage")
 var ebayItemName = document.querySelector("#ebayItemName")
+var ebayPrice = document.querySelector("#ebayPrice")
+var ebayRating = document.querySelector("#ebayRating")
 
 
 
