@@ -85,3 +85,14 @@
 .ebay-title {
     background-color: var(--ebay-title);
 }
+
+.amazonBtn {
+    border-radius: 5px;
+    background-color: var(--amazon-title);
+}
+
+.ebayBtn {
+    border-radius: 5px;
+    background-color: var(--ebay-title);
+    color: white;
+}
