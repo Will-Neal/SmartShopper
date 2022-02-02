@@ -52,14 +52,16 @@ function getAmazon(event){
             amazonItemName.textContent = data.name;
         })
     })
+    
 
     
 }
 
 function getEbay(event){
     event.preventDefault();
+    var userInput = document.querySelector("#userInput").value
     console.log("running getEbay Function")
-    fetch("https://ebay-products-search-scraper.p.rapidapi.com/products?query=camera&page=1&Item_Location=north_america", {
+    fetch("https://ebay-products-search-scraper.p.rapidapi.com/products?query=" + userInput + "&page=1&Item_Location=north_america", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "ebay-products-search-scraper.p.rapidapi.com",
