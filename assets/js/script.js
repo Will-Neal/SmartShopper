@@ -52,8 +52,38 @@ function getAmazon(event){
             amazonItemName.textContent = data.name;
         })
     })
+    
 
     
 }
+
+function getEbay(event){
+    var ebayUrl ="https://ebay-products-search-scraper.p.rapidapi.com/products?query=" + userInput +"&page=1&Item_Location=north_america";
+    event.preventDefault();
+    fetch(ebayUrl, {
+        “method”: “GET”,
+        “headers”: {
+            “x-rapidapi-host”: “ebay-products-search-scraper.p.rapidapi.com”,
+            “x-rapidapi-key”: “2fe7923d20msh849834e2d765975p110705jsnd39259dc0189”
+        }
+    })
+    .then(response => {
+        console.log(response);
+    })
+    .catch(err => {
+        console.error(err);
+    });
+    
+    
+    
+    
+    
+    New
+    
+    
+}
+
+
+
 
 searchBtn.addEventListener("click", getAmazon)
