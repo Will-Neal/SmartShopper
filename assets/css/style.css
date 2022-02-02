@@ -1,12 +1,35 @@
 /* Title */
 .display-4 {
     text-align: center;
-    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Subtitle */
+#subtitle {
+    text-align: center;
+    padding-bottom: 5px;
 }
 
 /* Search */
 .lead {
     text-align: center;
+}
+
+/* Search Input */
+#userInput {
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Search Button */
+#searchBtn {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+#searchBtn:hover {
+    opacity: 0.75;
 }
 
 /* Card Deck */
