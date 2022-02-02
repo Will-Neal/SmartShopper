@@ -2,6 +2,8 @@ var searchBtn = document.querySelector("#searchBtn")
 var amazonImg = document.querySelector("#amazonCardImage")
 var amazonDescription = document.querySelector("#amazonCardText")
 var amazonItemName = document.querySelector("#amazonItemName")
+var ebayImg = document.querySelector("#ebayImage")
+var ebayItemName = document.querySelector("#ebayItemName")
 
 
 
@@ -73,7 +75,12 @@ function getEbay(event){
     })
     .then(function(data){
         console.log(data)
-        console.log("Price: " + data.products[0].price)
+        console.log("Price: " + data.products[0].price);
+        console.log("image: " + data.products[0].image);
+        console.log("Name: " + data.products[0].title);
+        console.log("Rating: " + data.products[0].rating);
+        ebayImg.src = data.products[0].image;
+        ebayItemName.textContent = data.products[0].title;
     })
 }
 
