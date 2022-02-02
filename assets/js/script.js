@@ -4,10 +4,12 @@ var amazonDescription = document.querySelector("#amazonCardText")
 var amazonItemName = document.querySelector("#amazonItemName")
 var amazonPrice = document.querySelector("#amazonPrice")
 var amazonRating = document.querySelector("#amazonRating")
+var amazonButton = document.querySelector("#goToAmazon")
 var ebayImg = document.querySelector("#ebayImage")
 var ebayItemName = document.querySelector("#ebayItemName")
 var ebayPrice = document.querySelector("#ebayPrice")
 var ebayRating = document.querySelector("#ebayRating")
+var ebayButton = document.querySelector("#goToEbay")
 
 
 
@@ -39,6 +41,9 @@ function getAmazon(event){
         amazonImg.src = data.results[0].image
         amazonPrice.textContent = "$" + data.results[0].price
         amazonRating.textContent = data.results[0].stars + " ⭐"
+        amazonButton.addEventListener("click", function(){
+            location.href = data.results[0].url
+        })
         var urlSplit = data.results[0].url.split("/")
         var productId = urlSplit[5]
         // console.log(productId)
@@ -91,6 +96,9 @@ function getEbay(event){
         console.log("Shipping: " + data.products[0].shipping);
         ebayItemName.textContent = data.products[0].title;
         console.log("Link: " + data.products[0].productLink);
+        ebayButton.addEventListener("click", function(){
+            location.href = data.products[0].productLink
+        })
     })
 
 }
