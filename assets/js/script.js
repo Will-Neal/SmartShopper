@@ -42,7 +42,7 @@ function getAmazon(event){
         amazonPrice.textContent = "$" + data.results[0].price
         amazonRating.textContent = data.results[0].stars + " ⭐"
         amazonButton.addEventListener("click", function(){
-            location.href = data.results[0].url
+            window.open(data.results[0].url, '_blank');
         })
         var urlSplit = data.results[0].url.split("/")
         var productId = urlSplit[5]
@@ -97,7 +97,7 @@ function getEbay(event){
         ebayItemName.textContent = data.products[0].title;
         console.log("Link: " + data.products[0].productLink);
         ebayButton.addEventListener("click", function(){
-            location.href = data.products[0].productLink
+            window.open(data.products[0].productLink, '_blank');
         })
     })
 
