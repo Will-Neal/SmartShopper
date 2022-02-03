@@ -60,8 +60,10 @@ function getAmazon(event){
             if (response.status === 200) { // after content loads...
                 card[0].style.display = "inline"; // Show card
                 spinner.style.display = "none"; // Hide spinner
-            } else {
+            } else if (response.status === 500) {
                 Swal.fire('Error Try Again')
+                spinner.style.display = "none"
+                return
             }
             return response.json();
         }).then(function(data) {
@@ -89,8 +91,10 @@ function getEbay(event){
     .then(function(response) {
         if (response.status === 200) { // after content loads...
             card[1].style.display = "inline"; // Show card
-        } else {
+        } else if (response.status === 500){
             Swal.fire('Error Try Again')
+            spinner.style.display = "none"
+            return
         }
         return response.json()
     })
