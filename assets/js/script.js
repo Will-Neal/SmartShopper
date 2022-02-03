@@ -30,7 +30,7 @@ function getAmazon(event){
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "wolf-amazon-data-scraper.p.rapidapi.com",
-		"x-rapidapi-key": "4eb5600383mshf476dcb89976e3dp1c848bjsn925c619bd"
+        "x-rapidapi-key": "8341a9542dmshcd3eb44aff14a81p1340d8jsn24f0b8595c8b"
 	}
     })
     .then(function(response){
@@ -57,8 +57,8 @@ function getAmazon(event){
         fetch("https://wolf-amazon-data-scraper.p.rapidapi.com/products/" + productId + "?api_key=59ef84be287bba26357f5519b0058332", { // Call Amazon API w/Product ID
 	    "method": "GET",
 	    "headers": {
-		"x-rapidapi-host": "wolf-amazon-data-scraper.p.rapidapi.com",
-		"x-rapidapi-key": "2fe7923d20msh849834e2d765975p110705jsnd39259dc0189"
+		    "x-rapidapi-host": "wolf-amazon-data-scraper.p.rapidapi.com",
+            "x-rapidapi-key": "8341a9542dmshcd3eb44aff14a81p1340d8jsn24f0b8595c8b"
 	    }
         })
         .then(function(response){
