@@ -23,7 +23,7 @@ Our site makes use of multiple API calls to get the relevant information for use
 ## Deployment
 [Deployment Link](https://will-neal.github.io/SmartShopper-Application)
 
-![Screenshot](assets/images/screenshot.png?raw=true)
+![Screenshot](https://github.com/Will-Neal/SmartShopper-Application/blob/main/assets/img/screenshot.png?raw=true)
 
 ## Development
 SmartShopper is the submission for the first major project of the Columbia Engineering Coding Bootcamp from the winter of 2022. It is an application that utilizes two different APIs, based on concepts in HTML, CSS, Javascript, and Server-Side APIs. The final product represents the continued learning of three student developers.
