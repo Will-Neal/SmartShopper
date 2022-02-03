@@ -1,3 +1,4 @@
+/* Root Variables */
 :root {
     --amazon-title: #FEBD69;
     --amazon-orange: #FF9900;
@@ -21,6 +22,7 @@
     color: #555652;
 }
 
+/* Logo Colors  */
 #eRed {
     color: var(--ebay-red);
 }
@@ -37,7 +39,7 @@
     color: var(--ebay-green);
 }
 
-/* Search */
+/* Search Container */
 .lead {
     text-align: center;
 }
@@ -72,6 +74,7 @@
     margin-right: auto;
 }
 
+/* Card Text */
 .card-text {
     text-align: left;
 }
@@ -84,12 +87,6 @@
     text-align: center;
 }
 
-/* Spinner */
-.spinner-border {
-    display: none;
-    margin: auto;
-}
-
 /* Amazon Title */
 .amazon-title {
     background-color: var(--amazon-title);
@@ -100,15 +97,21 @@
     background-color: var(--ebay-title);
 }
 
-/* Amazon Button */
+/* Buy on Amazon Button */
 .amazonBtn {
     border-radius: 5px;
     background-color: var(--amazon-title);
 }
 
-/* eBay Button */
+/* Buy on eBay Button */
 .ebayBtn {
     border-radius: 5px;
     background-color: var(--ebay-title);
     color: white;
+}
+
+/* Spinner */
+.spinner-border {
+    display: none;
+    margin: auto;
 }

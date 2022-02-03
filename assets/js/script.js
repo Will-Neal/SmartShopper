@@ -57,9 +57,9 @@ function getAmazon(event){
                 spinner.style.display = "none"; // Hide spinner
                 return response.json();
             } else if (response.status >= 500) {
-                Swal.fire('Error Try Again')
-                spinner.style.display = "none"
-                return
+                Swal.fire('Error Try Again');
+                spinner.style.display = "none";
+                return;
             }
             
         }).then(function(data) {
