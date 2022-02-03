@@ -86,11 +86,13 @@
     background-color: var(--ebay-title);
 }
 
+/* Amazon Button */
 .amazonBtn {
     border-radius: 5px;
     background-color: var(--amazon-title);
 }
 
+/* eBay Button */
 .ebayBtn {
     border-radius: 5px;
     background-color: var(--ebay-title);
