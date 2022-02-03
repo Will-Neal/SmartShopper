@@ -38,9 +38,7 @@ function getAmazon(event){
         amazonPrice.textContent = "$" + data.results[0].price
         if (data.results[0].stars === undefined) {
             amazonRating.textContent = "No reviews yet ⭐"
-            console.log("There were no stars")
         } else {
-            console.log("There were stars")
             amazonRating.textContent = data.results[0].stars + " ⭐"
         }
         amazonButton.addEventListener("click", function(){
@@ -48,7 +46,6 @@ function getAmazon(event){
         })
         var urlSplit = data.results[0].url.split("/")
         var productId = urlSplit[5]
-        // console.log(productId)
         fetch("https://wolf-amazon-data-scraper.p.rapidapi.com/products/" + productId + "?api_key=59ef84be287bba26357f5519b0058332", {
 	    "method": "GET",
 	    "headers": {
@@ -60,12 +57,13 @@ function getAmazon(event){
             if (response.status === 200) { // after content loads...
                 card[0].style.display = "inline"; // Show card
                 spinner.style.display = "none"; // Hide spinner
-            } else if (response.status === 500) {
+                return response.json();
+            } else if (response.status >= 500) {
                 Swal.fire('Error Try Again')
                 spinner.style.display = "none"
                 return
             }
-            return response.json();
+            
         }).then(function(data) {
             amazonDescription.textContent = data.full_description;
             amazonItemName.textContent = data.name;
@@ -91,12 +89,12 @@ function getEbay(event){
     .then(function(response) {
         if (response.status === 200) { // after content loads...
             card[1].style.display = "inline"; // Show card
-        } else if (response.status === 500){
+            return response.json()
+        } else if (response.status >= 500){
             Swal.fire('Error Try Again')
             spinner.style.display = "none"
             return
-        }
-        return response.json()
+        }  
     })
     .then(function(data){
         shortRating = data.products[0].rating.split("")
