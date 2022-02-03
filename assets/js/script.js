@@ -105,3 +105,10 @@ function getEbay(event){
 
 searchBtn.addEventListener("click", getEbay)
 searchBtn.addEventListener("click", getAmazon)
+searchBtn.addEventListener("keypress", function(event){
+    if (event.key === "Enter") {
+        getEbay();
+        getAmazon();
+    }
+})
+
