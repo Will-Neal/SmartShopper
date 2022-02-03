@@ -32,7 +32,7 @@ SmartShopper is the submission for the first major project of the Columbia Engin
 The front-end was designed with a simple and clean interface, making it easy for end users to to compare Amazon & eBay prices for a given product.
 
 ## Future Development
-First and foremost, we would love to have access to the official APIs for Amazon and eBay for speed performance. Currently, we are using three free-to-use APIs and while they work for our purposes, in practice, they are very slow. While our application is functioning in its current state, it would be an immediate and large app quality improvement.
+First and foremost, we would love to have access to the official APIs for Amazon and eBay for speed performance. Currently, we are using three free-to-use APIs and while they work for our purposes, in practice, they are very slow. While our application is functioning in its current state, it would be an immediate and large quality of ,life improvement. It could also be beneficial to consider saving user searches or displaying multiple results, however, that would also clutter the interface with buttons and or old results because both sites are constantly changing and updating. 
 
 ## Testing
 There are no tests associated with the project.
