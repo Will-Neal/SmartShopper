@@ -97,7 +97,7 @@ function getEbay(event){
         if (shortRating[0] === undefined) {
             ebayRating.textContent = "No reviews yet ⭐"
         } else {
-            ebayRating.textContent = shortRating[0] + "⭐";
+            ebayRating.textContent = shortRating[0] + " ⭐";
         }
         ebayItemName.textContent = data.products[0].title;
         ebayButton.addEventListener("click", function(){
