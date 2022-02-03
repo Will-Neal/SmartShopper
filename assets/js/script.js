@@ -42,7 +42,7 @@ function getAmazon(event){
         amazonPrice.textContent = "$" + data.results[0].price
         amazonRating.textContent = data.results[0].stars + " ⭐"
         amazonButton.addEventListener("click", function(){
-            window.open(data.results[0].url, '_blank');
+            window.open(data.results[0].url, 'newAmazonPage');
         })
         var urlSplit = data.results[0].url.split("/")
         var productId = urlSplit[5]
