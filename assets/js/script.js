@@ -93,8 +93,8 @@ function getEbay(event){
     .then(function(data){
         // console.log(data)
         shortRating = data.products[0].rating.split("")
-        console.log(shortRating[0])
-        console.log(shortRating[0] === undefined)
+        // console.log(shortRating[0])
+        // console.log(shortRating[0] === undefined)
         ebayImg.src = data.products[0].image;
         ebayPrice.textContent = data.products[0].price;
         if (shortRating[0] === undefined) {

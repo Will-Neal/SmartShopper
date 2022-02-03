@@ -59,6 +59,9 @@
     opacity: 0.75;
 }
 
+.card-body {
+    text-align: center;
+}
 /* Card Deck */
 .card-deck {
     width: 50%;
