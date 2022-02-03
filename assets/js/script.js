@@ -92,7 +92,7 @@ function getEbay(event){
         ebayImg.src = data.products[0].image;
         ebayPrice.textContent = data.products[0].price;
         if (shortRating[0] === undefined) {
-            ebayRating.textContent = "No reviews yet"
+            ebayRating.textContent = "No reviews yet ⭐"
         } else {
             ebayRating.textContent = shortRating[0] + "⭐";
         }
