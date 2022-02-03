@@ -14,9 +14,10 @@ Our site makes use of multiple API calls to get the relevant information for use
 
 ## Features
 <ul>
- <li></li>
- <li></li>
- <li></li>
+ <li>Multiple API calls to Amazon and Ebay API</li>
+ <li>Bootstrap Framework</li>
+ <li>Dynamically update HTML using JavaScript</li>
+ <li>Live links to marketplace pages</li>
 </ul>
 
 ## Deployment
@@ -28,6 +29,9 @@ Our site makes use of multiple API calls to get the relevant information for use
 SmartShopper is the submission for the first major project of the Columbia Engineering Coding Bootcamp from the winter of 2022. It is an application that utilizes two different APIs, based on concepts in HTML, CSS, Javascript, and Server-Side APIs. The final product represents the continued learning of three student developers.
 
 The front-end was designed with a simple and clean interface, making it easy for end users to to compare Amazon & eBay prices for a given product.
+
+## Future Development
+First and foremost we would love to have access to the official APIs for Amazon and Ebay for speed purposes. Currently we are using three free to use APIs and while they work for our purposes, in practice they are very slow. This would be an easy fix since our application is functioning in its current state but it would be an immediate and large quality of life improvement.
 
 ## Testing
 There are no tests associated with the project.
