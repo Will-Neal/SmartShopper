@@ -40,7 +40,13 @@ function getAmazon(event){
         // console.log("url: " + data.results[0].url)
         amazonImg.src = data.results[0].image
         amazonPrice.textContent = "$" + data.results[0].price
-        amazonRating.textContent = data.results[0].stars + " ⭐"
+        if (data.results[0].stars === undefined) {
+            amazonRating.textContent = "No reviews yet ⭐"
+            console.log("There were no stars")
+        } else {
+            console.log("There were stars")
+            amazonRating.textContent = data.results[0].stars + " ⭐"
+        }
         amazonButton.addEventListener("click", function(){
             window.open(data.results[0].url, 'newAmazonPage');
         })
