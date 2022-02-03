@@ -59,9 +59,6 @@
     opacity: 0.75;
 }
 
-.card-body {
-    text-align: center;
-}
 /* Card Deck */
 .card-deck {
     width: 50%;
@@ -81,6 +78,16 @@
 
 .text-muted {
     color: white !important;
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* Spinner */
+.spinner-border {
+    display: none;
+    margin: auto;
 }
 
 /* Amazon Title */
