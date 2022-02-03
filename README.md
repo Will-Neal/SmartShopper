@@ -34,8 +34,6 @@ There are no tests associated with the project.
 
 ## Contributors
 SmartShopper is a collaboration between three dedicated developers. If you have any questions, you can find us on our GitHub pages.
-<ul>
- <li>Will is [here](https://github.com/Will-Neal).</li>
- <li>Yaakov is [here](https://github.com/yyb613).</li>
- <li>Colin is [here](https://github.com/GundamMosi10).</li>
-</ul>
+- Will is [here](https://github.com/Will-Neal).
+- Yaakov is [here](https://github.com/yyb613).
+- Colin is [here](https://github.com/GundamMosi10).
