@@ -30,13 +30,14 @@ function getAmazon(event){
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "wolf-amazon-data-scraper.p.rapidapi.com",
-		"x-rapidapi-key": "2fe7923d20msh849834e2d765975p110705jsnd39259dc0189"
+		"x-rapidapi-key": "4eb5600383mshf476dcb89976e3dp1c848bjsn925c619bd"
 	}
     })
     .then(function(response){
         return response.json();
     })
     .then(function(data) {
+        console.log(data)
         amazonImg.src = data.results[0].image;                 // Amazon Image
         amazonPrice.textContent = "$" + data.results[0].price; // Amazon Price
 
