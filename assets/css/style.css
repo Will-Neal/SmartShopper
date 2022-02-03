@@ -75,6 +75,10 @@
     margin-right: auto;
 }
 
+.card-text {
+    text-align: left;
+}
+
 .text-muted {
     color: white !important;
 }
