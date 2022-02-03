@@ -97,7 +97,7 @@ function getEbay(event){
         ebayItemName.textContent = data.products[0].title;
         console.log("Link: " + data.products[0].productLink);
         ebayButton.addEventListener("click", function(){
-            window.open(data.products[0].productLink, '_blank');
+            window.open(data.products[0].productLink, "newPage");
         })
     })
 
