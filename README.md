@@ -18,6 +18,7 @@ Our site uses multiple API calls to get relevant information for users. On the A
  <li>Bootstrap Framework</li>
  <li>Dynamically update HTML using JavaScript</li>
  <li>Live links to marketplace pages</li>
+ <li>Sweet Alert Framework for server errors</li>
 </ul>
 
 ## Deployment
