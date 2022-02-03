@@ -17,10 +17,8 @@ var spinner = document.querySelector(".spinner-border");
 // Call Amazon API
 function getAmazon(event){
     event.preventDefault() // Prevent Default
-
     card[0].style.display = "none"; // Hide card
     spinner.style.display = "inline"; // Show spinner
-
     var userInput = document.querySelector("#userInput").value
     var searchURL = "https://wolf-amazon-data-scraper.p.rapidapi.com/search/"+ userInput +"?api_key=59ef84be287bba26357f5519b0058332"
     fetch(searchURL, {
@@ -74,10 +72,8 @@ function getAmazon(event){
 // Call eBay API
 function getEbay(event){
     event.preventDefault(); // Prevent Default
-
     card[1].style.display = "none"; // Hide card
     spinner.style.display = "inline"; // Show spinner
-
     var userInput = document.querySelector("#userInput").value
     fetch("https://ebay-products-search-scraper.p.rapidapi.com/products?query=" + userInput + "&page=1&Item_Location=north_america", {
 	"method": "GET",
