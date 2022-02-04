@@ -29,24 +29,31 @@ function getAmazon(event){
     spinner.style.display = "inline"; // Show spinner
 
     var userInput = document.querySelector("#userInput").value; // Get User Input
-    var searchURL = "https://wolf-amazon-data-scraper.p.rapidapi.com/search/"+ userInput +"?api_key=59ef84be287bba26357f5519b0058332"; // URL
+    var searchURL = "https://amazon-data-scrapper9.p.rapidapi.com/search/"+ userInput +"?api_key=d4c2f7fba0c30cc8ff79a3f239c54afd"; // URL
 
-    fetch(searchURL, { // Call the Amazon API
+    fetch("https://amazon-data-scrapper9.p.rapidapi.com/search/MacBook?api_key=d4c2f7fba0c30cc8ff79a3f239c54afd", {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-host": "wolf-amazon-data-scraper.p.rapidapi.com",
-        "x-rapidapi-key": "8341a9542dmshcd3eb44aff14a81p1340d8jsn24f0b8595c8b"
+		"x-rapidapi-host": "amazon-data-scrapper9.p.rapidapi.com",
+		"x-rapidapi-key": "2fe7923d20msh849834e2d765975p110705jsnd39259dc0189"
 	}
-    })
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data) {
+    }) .then(function(response){
+        
+        if (response.status === 200) {        // after content loads...
+            card[0].style.display = "inline"; // Show card
+            spinner.style.display = "none";   // Hide spinner
+            return response.json();
+            } else if (response.status >= 500) {  // if error...
+            Swal.fire('Error Try Again');     // Display error message
+            spinner.style.display = "none";   // Hide spinner
+            return;
+            }
+        
+    }) .then(function(data){
         console.log(data)
-        amazonImg.src = data.results[0].image;                 // Amazon Image
-        amazonPrice.textContent = "$" + data.results[0].price; // Amazon Price
-
-        // REVIEWS
+        amazonImg.src = data.results[0].image;
+        amazonPrice.textContent = "$" + data.results[0].price;
+        //REVIEWS
         if (data.results[0].stars === undefined) {          // if no reviews...
             amazonRating.textContent = "No reviews yet ⭐"; // print 'no reviews'
         } else {                                                      // otherwise...
@@ -55,15 +62,14 @@ function getAmazon(event){
         amazonButton.addEventListener("click", function() {    // if click 'Buy on Amazon'...
             window.open(data.results[0].url, 'newAmazonPage'); // open in new page
         })
-
         var urlSplit = data.results[0].url.split("/"); // Split Amazon URL
         var productId = urlSplit[5];                   // Store Amazon Product ID
 
-        fetch("https://wolf-amazon-data-scraper.p.rapidapi.com/products/" + productId + "?api_key=59ef84be287bba26357f5519b0058332", { // Call Amazon API w/Product ID
+        fetch("https://amazon-data-scrapper9.p.rapidapi.com/products/" + productId + "?api_key=d4c2f7fba0c30cc8ff79a3f239c54afd", { // Call Amazon API w/Product ID
 	    "method": "GET",
 	    "headers": {
-		    "x-rapidapi-host": "wolf-amazon-data-scraper.p.rapidapi.com",
-            "x-rapidapi-key": "8341a9542dmshcd3eb44aff14a81p1340d8jsn24f0b8595c8b"
+		    "x-rapidapi-host": "amazon-data-scrapper9.p.rapidapi.com",
+            "x-rapidapi-key": "2fe7923d20msh849834e2d765975p110705jsnd39259dc0189"
 	    }
         })
         .then(function(response){
@@ -81,8 +87,12 @@ function getAmazon(event){
             amazonDescription.textContent = data.full_description; // Display Amazon Description
             amazonItemName.textContent = data.name;                // Display Amazon Title
         })
-    })
-}
+    })}
+
+
+        
+    
+
 
 // eBay API Function
 function getEbay(event){
@@ -143,7 +153,7 @@ searchBtn.addEventListener("keypress", function (event) {
     }
 })
 
-// GET SEARCH HISTORY FROM LOCAL STORAGE (ON PAGE LOAD)
+//GET SEARCH HISTORY FROM LOCAL STORAGE (ON PAGE LOAD)
 var searchesArray = JSON.parse(localStorage.getItem("searches")) || []; // Get from Local Storage
 appendSearch();                                                         // Display History
 
