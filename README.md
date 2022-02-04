@@ -10,7 +10,7 @@ Amazon and eBay are two of the largest global marketplaces with 213 million and 
 This is an application for the modern shopper. They are generally between the ages of 16 and 40 and turn to digital mediums for all of their shopping needs. They exist in a fast pace environment and prefer all of their information in a central location. They are students and professionals who appreciate a clean and simple user interface and want to get their information in the fewest clicks possible. Our app eliminates the tedious process of checking multiple shopping sites to find the best bargain, making it a breeze to find the best price with just one click.
 
 ## Functionality 
-Our site uses multiple API calls to get relevant information for users. On the Amazon side, an initial call is necessary to get the product number to make a subsequent API call to get more in-depth information. On the eBay side, a single API call is sufficient. The page then uses JavaScript to inject this information dynamically into the HTML and display it to the user. Included with this information is an image as well as a link that is made active over a button so that the user can navigate directly to the product page on the desired site. We use a set of conditional statements to avoid undesirable results from appearing. 
+Our site uses multiple API calls to get relevant information for users. On the Amazon side, an initial call is necessary to get the product number to make a subsequent API call to get more in-depth information. On the eBay side, a single API call is sufficient. The page then uses JavaScript to inject this information dynamically into the HTML and display it to the user. Included with this information is an image as well as a link that is made active over a button so that the user can navigate directly to the product page on the desired site. We use a set of conditional statements to avoid undesirable results from appearing. We also utilized client side local storage to display the users search history. This functionality also works when the user refreshes the page and or closes the page and reloads it in another tab of the same browser. 
 
 ## Features
 <ul>
@@ -19,6 +19,7 @@ Our site uses multiple API calls to get relevant information for users. On the A
  <li>Dynamically update HTML using JavaScript</li>
  <li>Live links to marketplace pages</li>
  <li>Sweet Alert Framework for server errors</li>
+ <li>User save buttons for search history</li>
 </ul>
 
 ## Deployment
