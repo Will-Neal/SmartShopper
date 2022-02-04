@@ -73,7 +73,8 @@
 }
 
 .history-btn {
-    background-color: lightgray;
+    background-color: var(--ebay-title);
+    color: white;
     border-radius: 5px;
 }
 
