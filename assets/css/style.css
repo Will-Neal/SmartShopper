@@ -9,6 +9,11 @@
     --ebay-green: #86B817;
 }
 
+/* Jumbotron */
+.jumbotron, .jumbotron-fluid {
+    padding-bottom: 1rem;
+}
+
 /* Title */
 .display-4 {
     text-align: center;
@@ -59,6 +64,17 @@
 
 #searchBtn:hover {
     opacity: 0.75;
+}
+
+/* Search History */
+#history {
+    text-align: center; 
+    margin-top: 2rem;
+}
+
+.history-btn {
+    background-color: lightgray;
+    border-radius: 5px;
 }
 
 /* Card Deck */
