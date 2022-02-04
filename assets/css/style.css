@@ -127,6 +127,11 @@
     color: white;
 }
 
+/* Buttons Hover */
+button:hover {
+     opacity: 0.8;
+}
+
 /* Spinner */
 .spinner-border {
     display: none;
