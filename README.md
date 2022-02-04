@@ -38,6 +38,14 @@ First and foremost, we would love to have access to the official APIs for Amazon
 ## Testing
 There are no tests associated with the project.
 
+## License
+
+<img src="https://img.shields.io/badge/license-MIT-red">
+  
+This project is licensed under the MIT License.
+
+For more information on this license, please visit [their website](https://www.mit.edu/~amini/LICENSE.md).
+  
 ## Contributors
 SmartShopper is a collaboration between three dedicated developers. If you have any questions, you can find us on our GitHub pages.
 - Will is [here](https://github.com/Will-Neal).
