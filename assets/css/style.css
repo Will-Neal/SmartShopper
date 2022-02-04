@@ -24,7 +24,7 @@
 #subtitle {
     text-align: center;
     padding-bottom: 5px;
-    color: #555652;
+    color: #979895;
 }
 
 /* Logo Colors  */
@@ -50,6 +50,10 @@
 }
 
 /* Search Input */
+input:focus::placeholder {
+  color: transparent;
+}
+
 #userInput {
     text-align: center;
     border-radius: 5px;
