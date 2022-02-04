@@ -1,24 +1,24 @@
 // Initialize Variables
 // GENERAL
-var searchBtn = document.querySelector("#searchBtn"); // Search Button
-var historyEl = document.querySelector("#history");   // Search History
-var card = document.getElementsByClassName("card");   // Info Card
+var searchBtn = document.querySelector("#searchBtn");    // Search Button
+var historyEl = document.querySelector("#history");      // Search History
+var card = document.getElementsByClassName("card");      // Info Card
 var spinner = document.querySelector(".spinner-border"); // Spinner
 
 // AMAZON
-var amazonImg = document.querySelector("#amazonCardImage"); // Card Image
-var amazonItemName = document.querySelector("#amazonItemName"); // Item number
-var amazonPrice = document.querySelector("#amazonPrice"); // Price
-var amazonRating = document.querySelector("#amazonRating"); // Rating
+var amazonImg = document.querySelector("#amazonCardImage");        // Card Image
+var amazonItemName = document.querySelector("#amazonItemName");    // Item number
+var amazonPrice = document.querySelector("#amazonPrice");          // Price
+var amazonRating = document.querySelector("#amazonRating");        // Rating
 var amazonDescription = document.querySelector("#amazonCardText"); // Description
-var amazonButton = document.querySelector("#goToAmazon"); // Buy on Amazon
+var amazonButton = document.querySelector("#goToAmazon");          // Buy on Amazon
 
 // EBAY
-var ebayImg = document.querySelector("#ebayCardImage"); // Card Image
+var ebayImg = document.querySelector("#ebayCardImage");     // Card Image
 var ebayItemName = document.querySelector("#ebayItemName"); // Item number
-var ebayPrice = document.querySelector("#ebayPrice"); // Price
-var ebayRating = document.querySelector("#ebayRating"); // Rating
-var ebayButton = document.querySelector("#goToEbay"); // Buy on eBay
+var ebayPrice = document.querySelector("#ebayPrice");       // Price
+var ebayRating = document.querySelector("#ebayRating");     // Rating
+var ebayButton = document.querySelector("#goToEbay");       // Buy on eBay
 
 // Amazon API Function
 function getAmazon(event){
@@ -41,11 +41,11 @@ function getAmazon(event){
         
         if (response.status === 200) {        // after content loads...
             card[0].style.display = "inline"; // Show card
-            // spinner.style.display = "none";   // Hide spinner
+            // spinner.style.display = "none";// Hide spinner
             return response.json();
-            } else if (response.status >= 500) {  // if error...
-            Swal.fire('Error Try Again');     // Display error message
-            spinner.style.display = "none";   // Hide spinner
+            } else if (response.status >= 500) { // if error...
+            Swal.fire('Error Try Again');        // Display error message
+            spinner.style.display = "none";      // Hide spinner
             return;
             }
         
@@ -53,7 +53,7 @@ function getAmazon(event){
         console.log(data) // CONSOLE LOG
         amazonImg.src = data.results[0].image;                 // Amazon Image
         amazonPrice.textContent = "$" + data.results[0].price; // Amazon Price
-        //REVIEWS
+        // REVIEWS
         if (data.results[0].stars === undefined) {          // if no reviews...
             amazonRating.textContent = "No reviews yet ⭐"; // print 'no reviews'
         } else {                                                      // otherwise...
