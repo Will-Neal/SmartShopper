@@ -3,18 +3,20 @@
 var searchBtn = document.querySelector("#searchBtn"); // Search Button
 var card = document.getElementsByClassName("card");   // Info Card
 var spinner = document.querySelector(".spinner-border"); // Spinner
+
 // AMAZON
-var amazonImg = document.querySelector("#amazonCardImage"); // Amazon Card Image
-var amazonItemName = document.querySelector("#amazonItemName"); // Amazon item number
-var amazonPrice = document.querySelector("#amazonPrice"); // Amazon Price
-var amazonRating = document.querySelector("#amazonRating"); // Amazon Rating
-var amazonDescription = document.querySelector("#amazonCardText"); // Amazon Description
+var amazonImg = document.querySelector("#amazonCardImage"); // Card Image
+var amazonItemName = document.querySelector("#amazonItemName"); // Item number
+var amazonPrice = document.querySelector("#amazonPrice"); // Price
+var amazonRating = document.querySelector("#amazonRating"); // Rating
+var amazonDescription = document.querySelector("#amazonCardText"); // Description
 var amazonButton = document.querySelector("#goToAmazon"); // Buy on Amazon
+
 // EBAY
-var ebayImg = document.querySelector("#ebayCardImage"); // eBay Card Image
-var ebayItemName = document.querySelector("#ebayItemName"); // eBay item number
-var ebayPrice = document.querySelector("#ebayPrice"); // eBay Price
-var ebayRating = document.querySelector("#ebayRating"); // eBay Rating
+var ebayImg = document.querySelector("#ebayCardImage"); // Card Image
+var ebayItemName = document.querySelector("#ebayItemName"); // Item number
+var ebayPrice = document.querySelector("#ebayPrice"); // Price
+var ebayRating = document.querySelector("#ebayRating"); // Rating
 var ebayButton = document.querySelector("#goToEbay"); // Buy on eBay
 
 // Amazon API Function
