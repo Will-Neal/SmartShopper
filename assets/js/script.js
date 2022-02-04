@@ -31,7 +31,7 @@ function getAmazon(event){
     var userInput = document.querySelector("#userInput").value; // Get User Input
     var searchURL = "https://amazon-data-scrapper9.p.rapidapi.com/search/"+ userInput +"?api_key=d4c2f7fba0c30cc8ff79a3f239c54afd"; // URL
 
-    fetch("https://amazon-data-scrapper9.p.rapidapi.com/search/MacBook?api_key=d4c2f7fba0c30cc8ff79a3f239c54afd", {
+    fetch(searchURL, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "amazon-data-scrapper9.p.rapidapi.com",
@@ -41,7 +41,7 @@ function getAmazon(event){
         
         if (response.status === 200) {        // after content loads...
             card[0].style.display = "inline"; // Show card
-            spinner.style.display = "none";   // Hide spinner
+            // spinner.style.display = "none";   // Hide spinner
             return response.json();
             } else if (response.status >= 500) {  // if error...
             Swal.fire('Error Try Again');     // Display error message
