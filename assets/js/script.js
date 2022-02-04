@@ -50,9 +50,9 @@ function getAmazon(event){
             }
         
     }) .then(function(data){
-        console.log(data)
-        amazonImg.src = data.results[0].image;
-        amazonPrice.textContent = "$" + data.results[0].price;
+        console.log(data) // CONSOLE LOG
+        amazonImg.src = data.results[0].image;                 // Amazon Image
+        amazonPrice.textContent = "$" + data.results[0].price; // Amazon Price
         //REVIEWS
         if (data.results[0].stars === undefined) {          // if no reviews...
             amazonRating.textContent = "No reviews yet ⭐"; // print 'no reviews'
@@ -84,15 +84,10 @@ function getAmazon(event){
             }
             
         }).then(function(data) {
-            amazonDescription.textContent = data.full_description; // Display Amazon Description
             amazonItemName.textContent = data.name;                // Display Amazon Title
+            amazonDescription.textContent = data.full_description; // Display Amazon Description
         })
     })}
-
-
-        
-    
-
 
 // eBay API Function
 function getEbay(event){
