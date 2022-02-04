@@ -10,16 +10,16 @@ Amazon and eBay are two of the largest global marketplaces with 213 million and 
 This is an application for the modern shopper. They are generally between the ages of 16 and 40 and turn to digital mediums for all of their shopping needs. They exist in a fast pace environment and prefer all of their information in a central location. They are students and professionals who appreciate a clean and simple user interface and want to get their information in the fewest clicks possible. Our app eliminates the tedious process of checking multiple shopping sites to find the best bargain, making it a breeze to find the best price with just one click.
 
 ## Functionality 
-Our site uses multiple API calls to get relevant information for users. On the Amazon side, an initial call is necessary to get the product number to make a subsequent API call to get more in-depth information. On the eBay side, a single API call is sufficient. The page then uses JavaScript to inject this information dynamically into the HTML and display it to the user. Included with this information is an image as well as a link that is made active over a button so that the user can navigate directly to the product page on the desired site. We use a set of conditional statements to avoid undesirable results from appearing. We also utilized client side local storage to display the users search history. This functionality also works when the user refreshes the page and or closes the page and reloads it in another tab of the same browser. 
+Our site uses multiple API calls to get relevant information for users. On the Amazon side, an initial call is necessary to get the product number to make a subsequent API call to get more in-depth information. On the eBay side, a single API call is sufficient. The page then uses JavaScript to inject this information dynamically into the HTML and display it to the user. Included with this information is an image as well as a link that is made active over a button so that the user can navigate directly to the product page on the desired site. We use a set of conditional statements to avoid undesirable results from appearing. We also utilized client-side local storage to display the user's search history. This functionality also works when the user refreshes or reopens the page in the same browser. 
 
 ## Features
 <ul>
- <li>Multiple API calls to Amazon and Ebay API</li>
+ <li>Multiple API calls to Amazon and eBay</li>
  <li>Bootstrap Framework</li>
  <li>Dynamically update HTML using JavaScript</li>
  <li>Live links to marketplace pages</li>
  <li>Sweet Alert Framework for server errors</li>
- <li>User save buttons for search history</li>
+ <li>Search History</li>
 </ul>
 
 ## Deployment
@@ -35,7 +35,7 @@ SmartShopper is the submission for the first major project of the Columbia Engin
 The front-end was designed with a simple and clean interface, making it easy for end users to to compare Amazon & eBay prices for a given product.
 
 ## Future Development
-First and foremost, we would love to have access to the official APIs for Amazon and eBay for speed performance. Currently, we are using three free-to-use APIs and while they work for our purposes, in practice, they are very slow. While our application is functioning in its current state, it would be an immediate and large quality of ,life improvement. It could also be beneficial to consider saving user searches or displaying multiple results, however, that would also clutter the interface with buttons and or old results because both sites are constantly changing and updating. 
+First and foremost, we would love to have access to the official APIs for Amazon and eBay for speed performance. Currently, we are using three free-to-use APIs and while they work for our purposes, in practice, they are very slow. Accordingly, our application is functioning in its current state, but a faster API would be an immediate quality of life improvement for our users.
 
 ## Testing
 There are no tests associated with the project.
