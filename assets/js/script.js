@@ -148,7 +148,7 @@ searchBtn.addEventListener("keypress", function (event) {
     }
 })
 
-//GET SEARCH HISTORY FROM LOCAL STORAGE (ON PAGE LOAD)
+// GET SEARCH HISTORY FROM LOCAL STORAGE (ON PAGE LOAD)
 var searchesArray = JSON.parse(localStorage.getItem("searches")) || []; // Get from Local Storage
 appendSearch();                                                         // Display History
 
