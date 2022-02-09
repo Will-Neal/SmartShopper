@@ -12,14 +12,14 @@ This is an application for the modern shopper. They are generally between the ag
 ## Functionality 
 Our site uses multiple API calls to get relevant information for users. On the Amazon side, an initial call is necessary to get the product number to make a subsequent API call to get more in-depth information. On the eBay side, a single API call is sufficient. The page then uses JavaScript to inject this information dynamically into the HTML and display it to the user. Included with this information is an image as well as a link that is made active over a button so that the user can navigate directly to the product page on the desired site. We use a set of conditional statements to avoid undesirable results from appearing. We also utilized client-side local storage to display the user's search history. This functionality also works when the user refreshes or reopens the page in the same browser. 
 
-## Features
+## Technologies
 <ul>
- <li>Multiple API calls to Amazon and eBay</li>
- <li>Bootstrap Framework</li>
- <li>Dynamically update HTML using JavaScript</li>
- <li>Live links to marketplace pages</li>
- <li>Sweet Alert Framework for server errors</li>
- <li>Search History</li>
+ <li>JavaScript</li>
+ <li>Bootsrap 4</li>
+ <li>SweetAlert</li>
+ <li>Server Side Apis</li>
+ <li>HTML</li>
+ <li>CSS</li>
 </ul>
 
 ## Deployment
